@@ -1,0 +1,484 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./../css/global.css">
+    <link rel="stylesheet" href="./../css/header.css">
+    <link rel="stylesheet" href="./../css/footer.css">
+
+    <title>Onlife | Relatório</title>
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid px-lg-5">
+
+                <a class="navbar-brand" href="./../index.html">
+                    OnLife
+                </a>
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#menuMobile"
+                    aria-controls="menuMobile"
+                    aria-label="Abrir menu de navegação"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav align-items-lg-center gap-lg-3">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./../pages/impacto.html">
+                                Impacto
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./../pages/recupere_se.html">
+                                Recupere-se
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./../pages/relatorio.html">
+                                Relatório de Saúde Mental
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Interatividade
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="./../pages/calculadora_tempo.html">
+                                        Calculadora de Tempo
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="./../pages/relogio_foco.html">
+                                        Relógio de Foco
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./../pages/sobre.html">
+                                Sobre
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div
+                    class="offcanvas offcanvas-end mobile-menu"
+                    tabindex="-1"
+                    id="menuMobile"
+                    aria-labelledby="menuMobileLabel"
+                >
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="menuMobileLabel">
+                            OnLife
+                        </h5>
+
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Fechar menu"
+                        ></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav gap-2">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./../pages/impacto.html">
+                                    Impacto
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./../pages/recupere_se.html">
+                                    Recupere-se
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./../pages/relatorio.html">
+                                    Relatório de Saúde Mental
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    data-bs-toggle="collapse"
+                                    href="#submenuInteratividade"
+                                    role="button"
+                                    aria-expanded="false"
+                                    aria-controls="submenuInteratividade"
+                                >
+                                    Interatividade
+                                    <span class="dropdown-arrow">⌄</span>
+                                </a>
+
+                                <div class="collapse" id="submenuInteratividade">
+                                    <ul class="navbar-nav submenu-mobile">
+                                        <li>
+                                            <a class="nav-link" href="./../pages/calculadora_tempo.html">
+                                                Calculadora de Tempo
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="nav-link" href="./../pages/relogio_foco.html">
+                                                Relógio de Foco
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./../pages/sobre.html">
+                                    Sobre
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+<main class="container py-5">
+
+    <!-- Título do relatório -->
+    <section class="text-center mb-5">
+        <h1>Relatório: Os efeitos do uso excessivo da internet</h1>
+
+        <p class="lead mt-3">
+            Uma análise sobre como o uso excessivo da internet
+            pode afetar a saúde mental, física e as relações sociais.
+        </p>
+    </section>
+
+    <!-- Introdução -->
+    <section class="mb-5">
+        <h2>1. Introdução</h2>
+
+        <p>
+         Essencial para o trabalho, o estudo e o lazer, a internet moldou a nossa
+         rotina. Contudo, o uso desenfreado e sem limites da rede cobra um preço alto,
+         gerando impactos negativos que afetam diretamente o nosso bem-estar e a
+         nossa saúde mental.
+        </p>
+
+        <p>
+            A internet tornou-se essencial para o trabalho, os estudos e o lazer,
+            moldando a nossa rotina. Contudo, o uso desenfreado da rede cobra um preço
+            alto, gerando impactos profundos no nosso bem-estar. Para lançar luz sobre
+            esse cenário, este relatório reúne dados e evidências sobre os efeitos da
+            hiperconexão, destacando suas consequências para a saúde mental, o
+            comportamento humano e as relações sociais.
+        </p>
+    </section>
+
+    <!-- Dados da pesquisa -->
+    <section class="mb-5">
+        <h2>2. Dados sobre o uso excessivo da internet</h2>
+
+        <p>
+            Em consonância com esse alerta, a pesquisa TIC Kids Online Brasil 2024
+            investigou como crianças e adolescentes se relacionam com o ambiente
+            digital. Os dados expõem as principais situações enfrentadas por esse
+            público, evidenciando o uso compulsivo e os desafios de convivência nas
+            redes.
+        </p>
+
+        <p>
+            A pesquisa aponta evidências diretas do impacto do tempo conectado na
+            rotina diária e nas relações interpessoais de crianças e adolescentes (11 a
+            17 anos):
+            Comportamento compulsivo (24%): Afirmaram que tentaram passar menos
+            tempo na internet, mas não conseguiram conter o uso.
+            Prejuízo social e acadêmico (22%): Deixaram de dedicar o tempo necessário a
+            familiares, amigos e obrigações escolares por causa do excesso de telas.
+        </p>
+
+        <div class="card shadow-sm p-3 my-4">
+            <h4 class="text-center mb-3">
+                Situações relacionadas ao uso excessivo
+            </h4>
+
+            <div>
+                <canvas id="graficoInternet"></canvas>
+            </div>
+
+            <p class="text-secondary small mt-3 mb-0">
+                Fonte: TIC Kids Online Brasil 2024 - Cetic.br/NIC.br.
+                Usuários de internet de 11 a 17 anos.
+            </p>
+        </div>
+    </section>
+
+    <!-- Saúde mental -->
+    <section class="mb-5">
+        <h2>3. Consequências para a saúde mental</h2>
+
+        <p>
+            O excesso de estímulos virtuais atua como um fator determinante no
+            desgaste da saúde mental. A sobrecarga de notificações e conteúdos digitais
+            alimenta estados constantes de ansiedade, estresse e dispersão cognitiva.
+            É preciso ponderar, no entanto, que os efeitos da hiperconexão não são
+            uniformes: a vulnerabilidade varia conforme o perfil e o contexto individual
+            de cada usuário.
+        </p>
+
+        <p>
+            Também é importante considerar que cada pessoa
+            apresenta uma relação diferente com a tecnologia.
+            Por isso, os efeitos não são iguais para todos.
+        </p>
+    </section>
+
+    <!-- Saúde física e social -->
+    <section class="mb-5">
+        <h2>4. Consequências físicas e sociais</h2>
+
+        <p>
+            A hiperconexão física e digital altera diretamente a rotina e os hábitos
+            diários, gerando impactos em três áreas vitais:
+            Qualidade do sono: A luz das telas e os estímulos noturnos prejudicam o
+            descanso necessário para a recuperação física e mental.
+            Saúde física: O tempo sedentário substitui a prática diária de atividades
+            físicas.
+            Convivência presencial: As interações virtuais passam a ocupar o espaço das
+            trocas e relações no mundo real.
+        </p>
+
+        <p>
+            Entre os possíveis problemas estão alterações
+            na qualidade do sono, sedentarismo e redução
+            do tempo dedicado às relações presenciais.
+        </p>
+    </section>
+
+    <!-- Considerações finais -->
+    <section class="mb-5">
+        <h2>5. Considerações finais</h2>
+
+        <p>
+            Em suma, os reflexos do uso excessivo da internet ultrapassam a esfera
+            individual, configurando-se como um problema de saúde pública e de
+            dinâmica social. A perda de controle relatada por jovens, a substituição de
+            hábitos vitais — como o sono e o convívio presencial — por horas de
+            navegação passiva apontam para a necessidade de reflexão coletiva.
+            Promover o debate sobre a desconexão digital e incentivar uma relação mais
+            consciente com as telas são passos fundamentais para preservar o bem-estar
+            emocional, a empatia e a qualidade de vida das próximas gerações.
+        </p>
+    </section>
+
+    <!-- Referências -->
+    <section class="border-top pt-4">
+        <h2>Referências</h2>
+
+        <p>
+            CETIC.BR. TIC Kids Online Brasil 2024.
+            Pesquisa sobre o uso da Internet por crianças
+            e adolescentes no Brasil.
+        </p>
+
+        <p>
+            <a href="https://cetic.br/pt/pesquisa/kids-online/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Consultar pesquisa TIC Kids Online Brasil
+            </a>
+        </p>
+    </section>
+
+</main>
+
+
+
+        <footer class="site-footer">
+    <div class="container">
+        <div class="row gy-4 footer-main">
+
+            <div class="col-12 col-md-5 col-lg-4">
+                <a class="footer-brand" href="./../index.html">
+                    OnLife
+                </a>
+
+                <p class="footer-description">
+                    Cuidar da mente também é cuidar da vida.
+                </p>
+
+                <p class="footer-copyright">
+                    &copy; OnLife 2026. Todos os direitos reservados.
+                </p>
+            </div>
+
+            <div class="col-12 col-md-7 col-lg-8">
+                <div class="row gy-4">
+
+                    <div class="col-6 col-lg-4">
+                        <h5 class="footer-title">Navegação</h5>
+
+                        <ul class="footer-links">
+                            <li>
+                                <a href="./../index.html">Início</a>
+                            </li>
+                            <li>
+                                <a href="./../pages/impacto.html">Impacto</a>
+                            </li>
+                            <li>
+                                <a href="./../pages/recupere_se.html">Recupere-se</a>
+                            </li>
+                            <li>
+                                <a href="./../pages/relatorio.html">Relatório de Saúde Mental</a>
+                            </li>
+                            <li>
+                                <a href="./../pages/sobre.html">Sobre</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-lg-4">
+                        <h5 class="footer-title">Interatividade</h5>
+
+                        <ul class="footer-links">
+                            <li>
+                                <a href="./../pages/calculadora_tempo.html">Calculadora de Tempo</a>
+                            </li>
+                            <li>
+                                <a href="./../pages/relogio_foco.html">Relógio de Foco</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-lg-4">
+                        <h5 class="footer-title">Desenvolvimento</h5>
+
+                        <p class="footer-description">
+                            Projeto desenvolvido por:
+                        </p>
+
+                        <ul class="footer-links">
+                            <li>
+                                <a href="https://github.com/Thiago-P-Sampaio" target="_blank" rel="noopener noreferrer">
+                                    Thiago
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/gunter-458" target="_blank" rel="noopener noreferrer">
+                                    Victor
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>OnLife | Promovendo conscientização e bem-estar.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Biblioteca Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Configuração do gráfico -->
+<script>
+    const ctx = document.getElementById('graficoInternet');
+
+    new Chart(ctx, {
+        type: 'bar',
+
+        data: {
+            labels: [
+                'Tentaram reduzir o uso',
+                'Menos tempo com família, amigos ou estudos',
+                'Navegaram sem interesse',
+                'Sentiram-se mal sem internet',
+                'Deixaram de comer ou dormir'
+            ],
+
+            datasets: [{
+                label: 'Percentual de entrevistados (%)',
+
+                data: [24, 22, 22, 16, 15],
+
+                backgroundColor: [
+                    '#52796f',
+                    '#84a98c',
+                    '#a3b18a',
+                    '#cad2c5',
+                    '#6b9080'
+                ],
+
+                borderWidth: 1
+            }]
+        },
+
+        options: {
+            indexAxis: 'y',
+
+            responsive: true,
+
+            maintainAspectRatio: true,
+
+            scales: {
+                x: {
+                    beginAtZero: true,
+                    max: 30,
+                    ticks: {
+                        callback: function(value) {
+                            return value + '%';
+                        }
+                    }
+                }
+            },
+
+            plugins: {
+                legend: {
+                    display: true
+                }
+            }
+        }
+    });
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>

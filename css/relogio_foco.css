@@ -1,0 +1,184 @@
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.focus-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+}
+
+.timer-container {
+    width: min(100%, 520px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.timer-header {
+    width: 100%;
+    text-align: center;
+}
+
+.timer-header h1 {
+    font-size: clamp(1.7rem, 5vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.timer-header p {
+    margin: 0;
+    color: #6c757d;
+}
+
+.timer-circle {
+    position: relative;
+    width: min(75vw, 360px);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.timer-circle svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+    overflow: visible;
+}
+
+.timer-circle circle {
+    fill: none;
+    stroke-width: 8;
+}
+
+.timer-background {
+    stroke: #e9ecef;
+}
+
+.timer-progress {
+    stroke: #198754;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.25s linear;
+}
+
+.timer-display {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 0 1rem;
+    text-align: center;
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    color: #212529;
+}
+
+.timer-settings {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+.setting-group {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: center;
+}
+
+.setting-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.setting-group input {
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+}
+
+.timer-controls {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.timer-controls button {
+    min-width: 130px;
+    padding: 0.7rem 1.5rem;
+    font-weight: 600;
+}
+
+.timer-message {
+    min-height: 24px;
+    margin: 0;
+    text-align: center;
+    color: #6c757d;
+}
+
+@media (max-width: 576px) {
+    .focus-page {
+        padding: 1.5rem 1rem;
+    }
+
+    .timer-container {
+        gap: 1.25rem;
+    }
+
+    .timer-circle {
+        width: min(78vw, 290px);
+    }
+
+    .timer-display {
+        font-size: clamp(1.8rem, 9vw, 2.8rem);
+    }
+
+    .timer-controls {
+        flex-direction: column;
+    }
+
+    .timer-controls button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 350px) {
+    .timer-circle {
+        width: min(82vw, 250px);
+    }
+
+    .timer-display {
+        font-size: 1.7rem;
+    }
+
+    .timer-settings {
+        gap: 0.4rem;
+    }
+
+    .setting-group label {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./../css/global.css">
+    <link rel="stylesheet" href="./../css/header.css">
+    <link rel="stylesheet" href="./../css/footer.css">
+
+    <title>Onlife | Recupere-se</title>
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid px-lg-5">
+
+                <a class="navbar-brand" href="./../index.html">
+                    OnLife
+                </a>
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#menuMobile"
+                    aria-controls="menuMobile"
+                    aria-label="Abrir menu de navegação"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav align-items-lg-center gap-lg-3">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./../pages/impacto.html">
+                                Impacto
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./../pages/recupere_se.html">
+                                Recupere-se
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./../pages/relatorio.html">
+                                Relatório de Saúde Mental
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Interatividade
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="./../pages/calculadora_tempo.html">
+                                        Calculadora de Tempo
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="./../pages/relogio_foco.html">
+                                        Relógio de Foco
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./../pages/sobre.html">
+                                Sobre
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div
+                    class="offcanvas offcanvas-end mobile-menu"
+                    tabindex="-1"
+                    id="menuMobile"
+                    aria-labelledby="menuMobileLabel"
+                >
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="menuMobileLabel">
+                            OnLife
+                        </h5>
+
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Fechar menu"
+                        ></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav gap-2">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./../pages/impacto.html">
+                                    Impacto
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./../pages/recupere_se.html">
+                                    Recupere-se
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./../pages/relatorio.html">
+                                    Relatório de Saúde Mental
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    data-bs-toggle="collapse"
+                                    href="#submenuInteratividade"
+                                    role="button"
+                                    aria-expanded="false"
+                                    aria-controls="submenuInteratividade"
+                                >
+                                    Interatividade
+                                    <span class="dropdown-arrow">⌄</span>
+                                </a>
+
+                                <div class="collapse" id="submenuInteratividade">
+                                    <ul class="navbar-nav submenu-mobile">
+                                        <li>
+                                            <a class="nav-link" href="./../pages/calculadora_tempo.html">
+                                                Calculadora de Tempo
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="nav-link" href="./../pages/relogio_foco.html">
+                                                Relógio de Foco
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./../pages/sobre.html">
+                                    Sobre
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+<main class="container my-5">
+
+    <div class="text-center mb-5">
+        <h1>Recupere o equilíbrio digital</h1>
+
+        <p class="lead">
+            A internet faz parte do nosso cotidiano, mas é importante
+            aprender a utilizá-la de maneira equilibrada.
+        </p>
+    </div>
+
+    <section class="mb-5">
+        <h2>Por que fazer uma pausa?</h2>
+
+        <p>
+            O excesso de conexão afeta diretamente a rotina, o sono e a convivência. A
+            boa notícia é que o autocuidado começa com pequenas atitudes: fazer pausas
+            regulares durante o dia é um remédio simples e poderoso para recuperar o
+            equilíbrio físico e mental.
+        </p>
+
+        <p>
+            Afinal, recuperar o equilíbrio digital não se trata de abolir a tecnologia da
+            nossa rotina, mas de retomar o controle para usá-la a nosso favor — e não
+            sermos usados por ela.
+        </p>
+    </section>
+
+    <section class="mb-5">
+        <h2>Dicas para melhorar seus hábitos digitais</h2>
+
+        <div class="row g-3">
+
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Estabeleça limites</h5>
+                        <p class="card-text">
+                            Crie limites de horário: Defina momentos certos do dia para usar redes sociais e
+                            outros aplicativos. Controlar quando você entra na internet impede que ela
+                            consuma o seu dia inteiro.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Faça pausas</h5>
+                        <p class="card-text">
+                            Faça pausas offline: Reserve momentos diários totalmente longe de celulares e
+                            computadores. Dar um descanso para os olhos e para a mente ajuda a reduzir a
+                            ansiedade e melhora a qualidade do seu dia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Pratique atividades offline</h5>
+                        <p class="card-text">
+                            Substitua a tela por experiências presenciais: Experimente ler, caminhar, praticar
+                            esportes ou passar mais tempo com familiares e amigos. Trocar o mundo
+                            virtual por conexões reais devolve a presença e o significado ao seu dia a dia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Cuide do seu sono</h5>
+                        <p class="card-text">
+                            Corte as telas antes de dormir: Evite usar o celular ou o computador próximo ao
+                            horário de repouso. O brilho e os estímulos dos aparelhos enganam o cérebro,
+                            dificultando o sono e o descanso que seu corpo precisa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="text-center mb-4">
+        <h2>Pequenas mudanças fazem diferença</h2>
+
+        <p>
+            Lembre-se: o objetivo não é deixar de usar a internet, mas sim encontrar um
+            equilíbrio sustentável entre o mundo digital e as experiências ricas da vida
+            fora das telas.
+        </p>
+    </section>
+
+</main>
+
+        <footer class="site-footer">
+    <div class="container">
+        <div class="row gy-4 footer-main">
+
+            <div class="col-12 col-md-5 col-lg-4">
+                <a class="footer-brand" href="./../index.html">
+                    OnLife
+                </a>
+
+                <p class="footer-description">
+                    Cuidar da mente também é cuidar da vida.
+                </p>
+
+                <p class="footer-copyright">
+                    &copy; OnLife 2026. Todos os direitos reservados.
+                </p>
+            </div>
+
+            <div class="col-12 col-md-7 col-lg-8">
+                <div class="row gy-4">
+
+                    <div class="col-6 col-lg-4">
+                        <h5 class="footer-title">Navegação</h5>
+
+                        <ul class="footer-links">
+                            <li>
+                                <a href="./../index.html">Início</a>
+                            </li>
+                            <li>
+                                <a href="./../pages/impacto.html">Impacto</a>
+                            </li>
+                            <li>
+                                <a href="./../pages/recupere_se.html">Recupere-se</a>
+                            </li>
+                            <li>
+                                <a href="./../pages/relatorio.html">Relatório de Saúde Mental</a>
+                            </li>
+                            <li>
+                                <a href="./../pages/sobre.html">Sobre</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-lg-4">
+                        <h5 class="footer-title">Interatividade</h5>
+
+                        <ul class="footer-links">
+                            <li>
+                                <a href="./../pages/calculadora_tempo.html">Calculadora de Tempo</a>
+                            </li>
+                            <li>
+                                <a href="./../pages/relogio_foco.html">Relógio de Foco</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-lg-4">
+                        <h5 class="footer-title">Desenvolvimento</h5>
+
+                        <p class="footer-description">
+                            Projeto desenvolvido por:
+                        </p>
+
+                        <ul class="footer-links">
+                            <li>
+                                <a href="https://github.com/Thiago-P-Sampaio" target="_blank" rel="noopener noreferrer">
+                                    Thiago
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/gunter-458" target="_blank" rel="noopener noreferrer">
+                                    Victor
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>OnLife | Promovendo conscientização e bem-estar.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>

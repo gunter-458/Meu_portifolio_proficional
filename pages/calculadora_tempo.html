@@ -1,0 +1,691 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./../css/global.css">
+    <link rel="stylesheet" href="./../css/header.css">
+    <link rel="stylesheet" href="./../css/calculadora_tempo.css">   
+    <link rel="stylesheet" href="./../css/footer.css">
+
+    <title>Onlife | Calculando seu tempo</title>
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid px-lg-5">
+
+                <a class="navbar-brand" href="./../index.html">
+                    OnLife
+                </a>
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#menuMobile"
+                    aria-controls="menuMobile"
+                    aria-label="Abrir menu de navegação"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav align-items-lg-center gap-lg-3">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./../pages/impacto.html">
+                                Impacto
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./../pages/recupere_se.html">
+                                Recupere-se
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./../pages/relatorio.html">
+                                Relatório de Saúde Mental
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Interatividade
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="./../pages/calculadora_tempo.html">
+                                        Calculadora de Tempo
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="./../pages/relogio_foco.html">
+                                        Relógio de Foco
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./../pages/sobre.html">
+                                Sobre
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div
+                    class="offcanvas offcanvas-end mobile-menu"
+                    tabindex="-1"
+                    id="menuMobile"
+                    aria-labelledby="menuMobileLabel"
+                >
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="menuMobileLabel">
+                            OnLife
+                        </h5>
+
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Fechar menu"
+                        ></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav gap-2">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./../pages/impacto.html">
+                                    Impacto
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./../pages/recupere_se.html">
+                                    Recupere-se
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./../pages/relatorio.html">
+                                    Relatório de Saúde Mental
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    data-bs-toggle="collapse"
+                                    href="#submenuInteratividade"
+                                    role="button"
+                                    aria-expanded="false"
+                                    aria-controls="submenuInteratividade"
+                                >
+                                    Interatividade
+                                    <span class="dropdown-arrow">⌄</span>
+                                </a>
+
+                                <div class="collapse" id="submenuInteratividade">
+                                    <ul class="navbar-nav submenu-mobile">
+                                        <li>
+                                            <a class="nav-link" href="./../pages/calculadora_tempo.html">
+                                                Calculadora de Tempo
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="nav-link" href="./../pages/relogio_foco.html">
+                                                Relógio de Foco
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./../pages/sobre.html">
+                                    Sobre
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+<main class="calculadora-page">
+
+    <section class="container py-5">
+
+        <div class="text-center mb-5">
+            <span class="badge rounded-pill text-bg-success px-3 py-2 mb-3">
+                ONLIFE | INTERATIVIDADE
+            </span>
+
+            <h1 class="display-4 fw-bold text-success">
+                Quanto vale o seu tempo?
+            </h1>
+
+            <p class="lead text-secondary mx-auto" style="max-width: 750px;">
+                Descubra quanto tempo você dedica às telas e visualize
+                o que poderia construir se investisse esse período em
+                conhecimento, habilidades e qualidade de vida.
+            </p>
+        </div>
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-12 col-lg-8">
+
+                <div class="card border-0 shadow rounded-4">
+                    <div class="card-body p-4 p-lg-5">
+
+                        <div class="text-center mb-4">
+                            <h2 class="h3 fw-bold">Seu tempo de tela</h2>
+                            <p class="text-secondary">
+                                Informe sua média diária de utilização de telas.
+                            </p>
+                        </div>
+
+                        <form id="formCalculadora">
+
+                            <div class="mb-4">
+                                <label for="mediaHoras" class="form-label fw-semibold">
+                                    Quantas horas por dia?
+                                </label>
+
+                                <div class="input-group input-group-lg">
+                                    <input
+                                        type="number"
+                                        class="form-control text-center fw-bold"
+                                        id="mediaHoras"
+                                        min="0"
+                                        max="24"
+                                        step="0.25"
+                                        value="5"
+                                        required
+                                    >
+                                    <span class="input-group-text">horas/dia</span>
+                                </div>
+
+                                <div class="form-text">
+                                    Considere redes sociais, vídeos, jogos,
+                                    navegação e outros usos recreativos ou cotidianos.
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-success btn-lg w-100 rounded-pill">
+                                Calcular meu tempo
+                            </button>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <section id="resultado" class="d-none">
+
+            <div class="text-center mb-4">
+                <span class="badge text-bg-success mb-3">
+                    RESULTADO DA CALCULADORA
+                </span>
+
+                <h2 class="display-6 fw-bold">
+                    O tempo que você dedica às telas
+                </h2>
+
+                <p class="text-secondary">
+                    Veja como suas horas diárias se acumulam ao longo dos anos.
+                </p>
+            </div>
+
+            <div class="row g-3 mb-5">
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <span class="text-secondary small">Por dia</span>
+                            <h3 class="display-6 fw-bold text-success mt-2" id="tempoDia">0h</h3>
+                            <p class="text-secondary mb-0">Tempo diário nas telas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <span class="text-secondary small">Por semana</span>
+                            <h3 class="display-6 fw-bold text-success mt-2" id="tempoSemana">0h</h3>
+                            <p class="text-secondary mb-0">Equivalente a 7 dias</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <span class="text-secondary small">Por mês</span>
+                            <h3 class="display-6 fw-bold text-success mt-2" id="tempoMes">0h</h3>
+                            <p class="text-secondary mb-0">Projeção de 30 dias</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <span class="text-secondary small">Por ano</span>
+                            <h3 class="display-6 fw-bold text-success mt-2" id="tempoAno">0h</h3>
+                            <p class="text-secondary mb-0">Projeção de 365 dias</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <span class="text-secondary small">Em 5 anos</span>
+                            <h3 class="display-6 fw-bold text-success mt-2" id="tempoCincoAnos">0h</h3>
+                            <p class="text-secondary mb-0">Projeção de 1.825 dias</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <span class="text-secondary small">Em 10 anos</span>
+                            <h3 class="display-6 fw-bold text-success mt-2" id="tempoDezAnos">0h</h3>
+                            <p class="text-secondary mb-0">Projeção de 3.650 dias</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card border-0 shadow-sm rounded-4 mb-5">
+                <div class="card-body p-4 p-lg-5">
+
+                    <h3 class="h4 fw-bold mb-3">
+                        Uma perspectiva diferente
+                    </h3>
+
+                    <p class="text-secondary mb-3" id="mensagemResultado"></p>
+
+                    <div class="progress rounded-pill" style="height: 14px;">
+                        <div
+                            class="progress-bar bg-success"
+                            id="barraTempo"
+                            role="progressbar"
+                            style="width: 0%;"
+                            aria-valuemin="0"
+                            aria-valuemax="24"
+                        ></div>
+                    </div>
+
+                    <div class="d-flex justify-content-between mt-2">
+                        <small class="text-secondary">0 horas</small>
+                        <small class="text-secondary">24 horas</small>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section id="comparativo" class="d-none">
+
+            <div class="text-center mb-5">
+
+                <span class="badge rounded-pill text-bg-success px-3 py-2 mb-3">
+                    E SE VOCÊ INVESTISSE ESSE TEMPO?
+                </span>
+
+                <h2 class="display-6 fw-bold text-success">
+                    O que você poderia conquistar?
+                </h2>
+
+                <p class="lead text-secondary mx-auto" style="max-width: 750px;">
+                    Imagine direcionar o mesmo número de horas para
+                    atividades que contribuem para seu desenvolvimento.
+                </p>
+
+            </div>
+
+            <div class="row justify-content-center mb-4">
+
+                <div class="col-12 col-md-7 col-lg-5">
+
+                    <label for="periodoComparacao" class="form-label fw-semibold">
+                        Escolha o período de comparação
+                    </label>
+
+                    <select class="form-select form-select-lg" id="periodoComparacao">
+                        <option value="1">1 ano</option>
+                        <option value="5">5 anos</option>
+                        <option value="10">10 anos</option>
+                    </select>
+
+                    <p class="form-text">
+                        As comparações serão recalculadas conforme o período escolhido.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="card border-0 shadow-sm rounded-4 mb-4">
+                <div class="card-body p-4 p-lg-5">
+
+                    <div class="text-center mb-4">
+                        <span class="text-secondary">Tempo disponível para investir</span>
+                        <h3 class="display-5 fw-bold text-success mt-2" id="totalComparacao">
+                            0 horas
+                        </h3>
+                    </div>
+
+                    <div class="row g-3" id="cardsComparacao">
+
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="border rounded-4 p-3 h-100">
+                                <div class="fs-2 mb-2">📚</div>
+                                <h4 class="h5 fw-bold">Leitura</h4>
+                                <p class="display-6 fw-bold text-success" id="livros">0</p>
+                                <p class="small text-secondary mb-0">
+                                    Livros de aproximadamente 200 páginas,
+                                    considerando 2,085 horas por livro.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="border rounded-4 p-3 h-100">
+                                <div class="fs-2 mb-2">🧠</div>
+                                <h4 class="h5 fw-bold">Novas habilidades</h4>
+                                <p class="display-6 fw-bold text-success" id="habilidades">0</p>
+                                <p class="small text-secondary mb-0">
+                                    Ciclos completos de 20 horas de prática
+                                    deliberada para desenvolver competências iniciais.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="border rounded-4 p-3 h-100">
+                                <div class="fs-2 mb-2">🌎</div>
+                                <h4 class="h5 fw-bold">Aprendizado de idiomas</h4>
+                                <p class="h4 fw-bold text-success" id="idiomas">0</p>
+                                <p class="small text-secondary mb-0">
+                                    Equivalência de horas em relação às referências
+                                    de formação linguística do FSI.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="border rounded-4 p-3 h-100">
+                                <div class="fs-2 mb-2">🏃</div>
+                                <h4 class="h5 fw-bold">Condicionamento físico</h4>
+                                <p class="display-6 fw-bold text-success" id="treinos">0</p>
+                                <p class="small text-secondary mb-0">
+                                    Sessões equivalentes de 30 minutos
+                                    de atividade física.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="border rounded-4 p-3 h-100">
+                                <div class="fs-2 mb-2">🎓</div>
+                                <h4 class="h5 fw-bold">Estudos e formação</h4>
+                                <p class="display-6 fw-bold text-success" id="cursos">0</p>
+                                <p class="small text-secondary mb-0">
+                                    Módulos equivalentes de 40 horas
+                                    de estudo estruturado.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="border rounded-4 p-3 h-100">
+                                <div class="fs-2 mb-2">🌱</div>
+                                <h4 class="h5 fw-bold">Construção de hábitos</h4>
+                                <p class="display-6 fw-bold text-success" id="habitos">0</p>
+                                <p class="small text-secondary mb-0">
+                                    Ciclos equivalentes de 30 dias
+                                    dedicando 15 minutos diários a uma prática.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="alert alert-success border-0 rounded-4 p-4 mb-5">
+                <h3 class="h5 fw-bold">
+                    Seu tempo pode construir algo diferente.
+                </h3>
+
+                <p class="mb-0" id="reflexaoComparacao">
+                    Cada hora pode representar uma oportunidade de aprendizado,
+                    desenvolvimento e mudança.
+                </p>
+            </div>
+
+            <div class="card border-0 shadow-sm rounded-4 mb-5">
+                <div class="card-body p-4">
+
+                    <h3 class="h4 fw-bold mb-3">
+                        Entenda as estimativas
+                    </h3>
+
+                    <div class="accordion" id="accordionFontes">
+
+                        <div class="accordion-item">
+                            <h4 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#fonteLeitura">
+                                    Leitura de livros
+                                </button>
+                            </h4>
+
+                            <div id="fonteLeitura" class="accordion-collapse collapse show" data-bs-parent="#accordionFontes">
+                                <div class="accordion-body text-secondary">
+                                    O artigo de Charles Chu, publicado na Quartz,
+                                    apresenta uma estimativa de 417 horas anuais
+                                    para a leitura de 200 livros. A calculadora
+                                    utiliza essa proporção como referência, não
+                                    como garantia de leitura ou compreensão.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h4 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fonteIdiomas">
+                                    Aprendizado de idiomas — FSI
+                                </button>
+                            </h4>
+
+                            <div id="fonteIdiomas" class="accordion-collapse collapse" data-bs-parent="#accordionFontes">
+                                <div class="accordion-body text-secondary">
+                                    O Foreign Service Institute apresenta estimativas
+                                    de 600 a 750 horas para idiomas da categoria I,
+                                    900 horas para a categoria II, 1.100 horas
+                                    para a categoria III e 2.200 horas para a
+                                    categoria IV. Os parâmetros foram desenvolvidos
+                                    para profissionais falantes nativos de inglês
+                                    em treinamento intensivo. Não devem ser
+                                    interpretados como previsão individual para
+                                    falantes de português.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h4 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fonteFisica">
+                                    Condicionamento físico — ACSM / CDC
+                                </button>
+                            </h4>
+
+                            <div id="fonteFisica" class="accordion-collapse collapse" data-bs-parent="#accordionFontes">
+                                <div class="accordion-body text-secondary">
+                                    As recomendações para adultos incluem pelo menos
+                                    150 minutos semanais de atividade aeróbica moderada
+                                    e fortalecimento muscular em dois ou mais dias
+                                    por semana. A quantidade de horas, isoladamente,
+                                    não determina resultados físicos.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h4 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fonteHabilidades">
+                                    Aquisição de habilidades — 20 horas
+                                </button>
+                            </h4>
+
+                            <div id="fonteHabilidades" class="accordion-collapse collapse" data-bs-parent="#accordionFontes">
+                                <div class="accordion-body text-secondary">
+                                    Josh Kaufman popularizou a proposta de dedicar
+                                    20 horas de prática deliberada para superar
+                                    a barreira inicial de aprendizagem de uma
+                                    habilidade. Isso não significa domínio,
+                                    fluência ou especialização em apenas 20 horas.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    </section>
+
+</main>
+
+
+    <footer class="site-footer">
+    <div class="container">
+        <div class="row gy-4 footer-main">
+
+            <div class="col-12 col-md-5 col-lg-4">
+                <a class="footer-brand" href="./../index.html">
+                    OnLife
+                </a>
+
+                <p class="footer-description">
+                    Cuidar da mente também é cuidar da vida.
+                </p>
+
+                <p class="footer-copyright">
+                    &copy; OnLife 2026. Todos os direitos reservados.
+                </p>
+            </div>
+
+            <div class="col-12 col-md-7 col-lg-8">
+                <div class="row gy-4">
+
+                    <div class="col-6 col-lg-4">
+                        <h5 class="footer-title">Navegação</h5>
+
+                        <ul class="footer-links">
+                            <li>
+                                <a href="./../index.html">Início</a>
+                            </li>
+                            <li>
+                                <a href="./../pages/impacto.html">Impacto</a>
+                            </li>
+                            <li>
+                                <a href="./../pages/recupere_se.html">Recupere-se</a>
+                            </li>
+                            <li>
+                                <a href="./../pages/relatorio.html">Relatório de Saúde Mental</a>
+                            </li>
+                            <li>
+                                <a href="./../pages/sobre.html">Sobre</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-lg-4">
+                        <h5 class="footer-title">Interatividade</h5>
+
+                        <ul class="footer-links">
+                            <li>
+                                <a href="./../pages/calculadora_tempo.html">Calculadora de Tempo</a>
+                            </li>
+                            <li>
+                                <a href="./../pages/relogio_foco.html">Relógio de Foco</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-lg-4">
+                        <h5 class="footer-title">Desenvolvimento</h5>
+
+                        <p class="footer-description">
+                            Projeto desenvolvido por:
+                        </p>
+
+                        <ul class="footer-links">
+                            <li>
+                                <a href="https://github.com/Thiago-P-Sampaio" target="_blank" rel="noopener noreferrer">
+                                    Thiago
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/gunter-458" target="_blank" rel="noopener noreferrer">
+                                    Victor
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>OnLife | Promovendo conscientização e bem-estar.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="../js/calculadora_tempo.js" defer></script>
+
+</body>
+</html>

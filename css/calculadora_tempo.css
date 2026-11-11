@@ -1,0 +1,87 @@
+
+.calculadora-page {
+    min-height: 70vh;
+}
+
+.calculadora-page .card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.calculadora-page .card:hover {
+    transform: translateY(-3px);
+}
+
+.calculadora-page .form-control:focus,
+.calculadora-page .form-select:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.15);
+}
+
+.calculadora-page .form-control {
+    min-height: 55px;
+}
+
+.calculadora-page .progress {
+    height: 14px;
+    background-color: #e9ecef;
+}
+
+.calculadora-page .progress-bar {
+    transition: width 0.6s ease;
+}
+
+.calculadora-page .accordion-button:not(.collapsed) {
+    color: #198754;
+    background-color: #e9f5ee;
+    box-shadow: none;
+}
+
+.calculadora-page .accordion-button:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.15);
+}
+
+.calculadora-page .accordion-body {
+    line-height: 1.8;
+}
+
+.calculadora-page .accordion-body a {
+    display: inline-block;
+    margin-top: 8px;
+    color: #198754;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.calculadora-page .accordion-body a:hover {
+    text-decoration: underline;
+}
+
+.calculadora-page #cardsComparacao .border {
+    border-color: #e5eae7 !important;
+}
+
+.calculadora-page #cardsComparacao .border:hover {
+    border-color: #198754 !important;
+}
+
+@media (max-width: 575.98px) {
+    .calculadora-page .display-4 {
+        font-size: 2.3rem;
+    }
+
+    .calculadora-page .display-6 {
+        font-size: 2rem;
+    }
+
+    .calculadora-page .card-body {
+        padding: 1.25rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .calculadora-page .card,
+    .calculadora-page .progress-bar {
+        transition: none;
+    }
+}
